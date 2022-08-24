@@ -1,7 +1,5 @@
 /* game board table */
 
-
-
 #board {
   margin: auto;
   padding-top: 10vh;
@@ -35,4 +33,5 @@
 
 #column-top td:hover {
   background-color: gold;
+  
 }

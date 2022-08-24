@@ -39,7 +39,6 @@ class Game {
       headCell.setAttribute('id', x);
       top.append(headCell);
     }
-  
     board.append(top);
   
     // make main part of board
@@ -82,6 +81,10 @@ class Game {
   /** endGame: announce game end */
   endGame(msg) {
     alert(msg);
+    startBtn.setAttribute('disabled', true);
+    p1Color.removeAttribute('disabled');
+    p2Color.removeAttribute('disabled');
+
     
   }
 
@@ -170,13 +173,26 @@ const startBtn = document.getElementById('start-game');
 const p1Color = document.getElementById('p1-color');
 const p2Color = document.getElementById('p2-color');
 
+p1Color.addEventListener('change', enableStart)
+p2Color.addEventListener('change', enableStart)
 startBtn.addEventListener('click', startGame)
+
+function enableStart() {
+  if (p1Color.value !== p2Color.value) {
+    startBtn.removeAttribute('disabled');
+  }
+
+}
 
 
 
 function startGame() {
   const boardDiv = document.getElementById('board')
   boardDiv.innerHTML = '';
+
+  p1Color.setAttribute('disabled', true);
+  p2Color.setAttribute('disabled', true);
+
 
 
   
@@ -193,6 +209,9 @@ function startGame() {
     alert("You must select a player color for each player.");
     return;
   }
+  
+
+
   // if (!(isColor(p1Color.value)) || !(isColor(p2Color.value))) {
   //   alert("You must input a valid color");
   //   return;
