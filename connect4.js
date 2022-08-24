@@ -193,10 +193,10 @@ function startGame() {
     alert("You must select a player color for each player.");
     return;
   }
-  if (!(isColor(p1Color.value)) || !(isColor(p2Color.value))) {
-    alert("You must input a valid color");
-    return;
-  }
+  // if (!(isColor(p1Color.value)) || !(isColor(p2Color.value))) {
+  //   alert("You must input a valid color");
+  //   return;
+  // }
 
 
   
