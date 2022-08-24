@@ -183,6 +183,7 @@ function startGame() {
   // checking if input is valid color, found this code on StackOverflow
 // https://stackoverflow.com/questions/48484767/javascript-check-if-string-is-valid-css-color
   const isColor = (playerColor) => {
+    playerColor = playerColor.toLowerCase();
     let s = new Option().style;
     s.color = playerColor;
     return s.color == playerColor;
