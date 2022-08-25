@@ -16,6 +16,18 @@ class Game {
     this.gameOver = false;
   }
 
+  mouseOver(e) {
+    let pieceDiv = document.createElement('div');
+    pieceDiv.classList.add("piece");
+    pieceDiv.style.backgroundColor = this.currPlayer.color;
+    e.target.append(pieceDiv);
+  }
+
+  mouseOut(e) {
+    e.target.firstChild.remove();
+  }
+
+
   /** makeBoard: create in-JS board structure:
  *   board = array of rows, each row is array of cells  (board[y][x]) */
   makeBoard() {
@@ -33,6 +45,9 @@ class Game {
     const top = document.createElement('tr');
     top.setAttribute('id', 'column-top');
     top.addEventListener('click', this.handleClick.bind(this));
+
+    top.addEventListener("mouseover", this.mouseOver.bind(this));
+    top.addEventListener("mouseout", this.mouseOut.bind(this));
   
     for (let x = 0; x < this.width; x++) {
       const headCell = document.createElement('td');
@@ -55,6 +70,9 @@ class Game {
     }
   }
 
+
+  
+
   /** findSpotForCol: given column x, return top empty y (null if filled) */
 
   findSpotForCol(x) {
@@ -71,6 +89,8 @@ class Game {
   placeInTable(y, x) {
     const piece = document.createElement('div');
     piece.classList.add('piece');
+    piece.classList.add('fall')
+
     piece.style.backgroundColor = this.currPlayer.color;
     piece.style.top = -50 * (y + 2);
 

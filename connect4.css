@@ -1,5 +1,9 @@
 /* game board table */
 
+body {
+  text-align: center;
+}
+
 #board {
   margin: auto;
   padding-top: 10vh;
@@ -29,9 +33,25 @@
 
 #column-top td {
   border: dashed 1px lightgray;
+  
 }
 
 #column-top td:hover {
-  background-color: gold;
+  /* background-color: gold; */
   
+}
+
+
+.fall {
+  animation-name: fall-animation;
+  animation-duration: 500ms;
+}
+
+@keyframes fall-animation {
+  from {
+      transform: translateY(-500px);
+  }
+  to {
+      transform: translateY(0);
+  }
 }
