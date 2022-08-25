@@ -102,8 +102,11 @@ class Game {
 
   /** endGame: announce game end */
   endGame(msg) {
-    alert(msg);
-    startBtn.setAttribute('disabled', true);
+    setTimeout(() => {
+      alert(msg)
+    }, 1000);
+    //alert(msg);
+    //startBtn.setAttribute('disabled', true);
     p1Color.removeAttribute('disabled');
     p2Color.removeAttribute('disabled');
 

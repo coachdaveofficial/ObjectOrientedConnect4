@@ -21,13 +21,17 @@ body {
 /* pieces are div within game table cells: draw as colored circles */
 
 .piece {
-  margin: 5px;
+  margin: auto;
   width: 80%;
   height: 80%;
   border-radius: 50%;
-  
-  
+  z-index: -1;
+  left: 1px;
+  bottom: 0px;
 }
+  
+  
+
 
 .letter {
   margin: -2px;
@@ -45,7 +49,7 @@ body {
 }
 
 #column-top td:hover {
-  /* background-color: gold; */
+  cursor: pointer;
   
 }
 
