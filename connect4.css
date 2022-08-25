@@ -2,6 +2,7 @@
 
 body {
   text-align: center;
+  background-color:cadetblue
 }
 
 #board {
@@ -26,6 +27,13 @@ body {
   border-radius: 50%;
   
   
+}
+
+.letter {
+  margin: -2px;
+  transition: color 1000ms;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 200%;
 }
 
 
