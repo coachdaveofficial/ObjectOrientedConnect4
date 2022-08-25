@@ -5,6 +5,8 @@
  * board fills (tie)
  */
 
+
+
 class Game {
   constructor(p1, p2, height = 6, width = 7) {
     this.width = width;
@@ -131,7 +133,9 @@ class Game {
     // check for win
     if (this.checkForWin()) {
       this.gameOver = true;
-      return this.endGame(`Player ${this.currPlayer.color} won!`);
+      let result = ntc.name(this.currPlayer.color);
+      let specificName = result[1];
+      return this.endGame(`Player ${specificName} won!`);
     }
     
     // check for tie
@@ -245,6 +249,7 @@ function startGame() {
   new Game(p1, p2);
 
 }
+
 
 
 // color changing Connect 4 title
