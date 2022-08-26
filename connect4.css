@@ -2,7 +2,7 @@
 
 body {
   text-align: center;
-  background-color:cadetblue
+  background-color:#5f9ea0
 }
 
 #board {
@@ -49,7 +49,10 @@ body {
 }
 
 #column-top td:hover {
+  background-color: inherit;
+  border-radius: 50%;
   cursor: pointer;
+  
   
 }
 

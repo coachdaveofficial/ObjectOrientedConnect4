@@ -19,14 +19,18 @@ class Game {
   }
 
   mouseOver(e) {
-    let pieceDiv = document.createElement('div');
-    pieceDiv.classList.add("piece");
-    pieceDiv.style.backgroundColor = this.currPlayer.color;
-    e.target.append(pieceDiv);
+    // let pieceDiv = document.createElement('div');
+    // pieceDiv.classList.add("piece");
+    // pieceDiv.style.backgroundColor = this.currPlayer.color;
+    // e.target.append(pieceDiv);
+
+    e.target.style.backgroundColor = this.currPlayer.color;
   }
 
   mouseOut(e) {
-    e.target.firstChild.remove();
+    // e.target.firstChild.remove();
+
+    e.target.style.backgroundColor = '#5f9ea0';
   }
 
 
