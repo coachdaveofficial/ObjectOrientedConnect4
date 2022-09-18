@@ -5,9 +5,26 @@ body {
   background-color:#5f9ea0
 }
 
+#game-over {
+  width:50%;
+  margin:20px auto;
+  padding:30px;
+  border-radius:5px;
+  box-shadow:0 0 15px 5px #ccc;
+  color: white;
+  background-color:darkslateblue;
+  visibility: visible;
+  position: relative;
+  z-index: -1;
+  
+  
+  
+  
+}
+
 #board {
   margin: auto;
-  padding-top: 10vh;
+  padding-top: 5vh;
 }
 
 #board td {
